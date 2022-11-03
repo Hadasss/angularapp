@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-user',
@@ -8,21 +9,19 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   // properties:
-  firstName = 'John';
-  lastName = 'Doe';
-  age = 30;
-  address = {
-    street: '50 Main street',
-    city: 'Boston',
-    state: 'MA',
-  };
+  user: User;
 
   // methods:
   constructor() {
-    // this.sayHello();
-  }
-
-  sayHello() {
-    console.log(`Hello ${this.firstName}`);
+    this.user = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30,
+      address: {
+        street: '50 Main st',
+        city: 'Boston',
+        state: 'MA',
+      },
+    };
   }
 }
